@@ -27,6 +27,18 @@ var firstNpike = {
       sum += this.cookiesPurchased[i];
     }
     return sum;
+  },
+  //Loop for document command
+  docWrite: function () {
+    var sum = this.totalCookies();
+    var cookies = firstNpike.cookiesPerHour();
+    var cookiesList = document.getElementById('cookies');
+    for (var i = 0; i < cookies.length; i++) {
+      var listElement = document.createElement('li'); //Step 1
+      // listElement.setAttribute('class','cookies-list-item'); //Step 2
+      listElement.textContent = cookies[i] + ' ' + i; // Step 2
+      cookiesList.appendChild(listElement); //Step3
+    }
   }
 };
 firstNpike.cookiesPerHour();
