@@ -38,9 +38,9 @@ Store.prototype.totalCookiesPerDay = function () {
 
 //header DOM function
 Store.prototype.tabHeader = function() {
-  var tableEl = document.getElementById('cookie-table');
+  var tableEl = document.getElementById('header-table');
   var thEl = document.createElement('th');
-  for (var i = 0; i < hours.length; i++){
+  for (var i = 0; i < hours.length; i++) {
     var tdEl = document.createElement('td');
     var rowData = hours[i];
     tdEl.textContent = rowData;
@@ -48,27 +48,25 @@ Store.prototype.tabHeader = function() {
   }
   tableEl.appendChild(thEl);
 };
-'br';
-//body DOM function
-Store.prototype.tabBody = function() {
-  var tableEl = document.getElementById('cookie-table');
-  var tbEl = document.createElement('tb');
 
-  for (var i = 0; i < storesNames.length; i++) {
-    var tdEl2 = document.createElement('td');
-    var store = storesNames[i];
-    tdEl2.textContent = store;
-
-    for (var j = 0; j < cookiesPurchased.length - 1; j++){
-      var tdEl3 = document.createElement('td');
-      var cookees = cookiesPurchased[j];
-      tdEl3.textContent = cookees;
-      tdEl2.appendChild(tdEl3);
-    }
-    tbEl.appendChild(tdEl2);
-  }
-  tableEl.appendChild(tbEl);
-};
+// //body DOM function
+// Store.prototype.tabBody = function() {
+//   var tableEl = document.getElementById('body-table');
+//
+//   for (var i = 0; i < storesNames.length; i++) {
+//     var tdEl2 = document.createElement('td');
+//     var store = storesNames[i];
+//     tdEl2.textContent = store;
+//
+//     for (var j = 0; j < cookiesPurchased.length - 1; j++){
+//       var tdEl3 = document.createElement('td');
+//       var cookees = cookiesPurchased[j];
+//       tdEl3.textContent = cookees;
+//       tableEl.appendChild(tdEl3);
+//     }
+//   }
+//   tableEl.appendChild(tdEl2);
+// };
 
 var firstAndPike = new Store (23,65,6.3);
 var SeaTacAirport = new Store (3,24,1.2);
