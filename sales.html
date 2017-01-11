@@ -11,13 +11,13 @@
         <fieldset>
           <legend>New Location</legend>
           <label for="locationName">Location:</label>
-          <input name="locationName" id="locationInput" type="text"/></br>
+          <input name="locationName" id="locationInput" type="text" maxlength="30"/></br>
 
           <label for="minCustPerHour">Enter minimum customers per hour:</label>
-          <input name="minCustPerHour" id="minInput" type="number"/></br>
+          <input name="minCustPerHour" id="minInput" type="number" min="1" max="50"/></br>
 
           <label for="maxCustPerHour">Enter maximum customers per hour:</label>
-          <input name="maxCustPerHour" id="maxInput" type="number"/></br>
+          <input name="maxCustPerHour" id="maxInput" type="number" min="3" max="500"/></br>
 
           <label for="avgCookieSale">Enter average cookies bought by customer:</label>
           <input name="avgCookieSale" id="avgInput" type="number" step="0.1"/></br>
