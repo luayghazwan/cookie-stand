@@ -5,4 +5,6 @@ body {
 #id {
   color: red;
   font-family: serif;
+  left: 100px;
+  top: 150px;
 }
