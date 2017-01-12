@@ -50,7 +50,7 @@ function tableHeader() {
 
 //Body DOM function
 Store.prototype.tableBody = function() {
-
+  this.totalCookiesPerDay();
   var tableBodyEl = document.getElementById('body-table');
   var trEl = document.createElement('tr');
   var tdForStores = document.createElement('td');
@@ -86,18 +86,31 @@ var CapitolHill = new Store (20,38,2.3,'Capitol Hill');
 var Alki = new Store (2,16,4.6,'Alki');
 //
 
+var locForm = document.getElementById('first-form');
+
+locForm.addEventListener('submit', function(event){
+  event.preventDefault();
+  event.stopPropagation();
+
+  var minCustPerHr = event.target.minCustPerHour.value;
+  var maxCustPerHr = event.target.maxCustPerHour.value;
+  var avgCookieSl = event.target.avgCookieSale.value;
+  var location = event.target.locationName.value;
+
+  addLocation(minCustPerHr, maxCustPerHr, avgCookieSl, location);
+},false);
+
+function addLocation(minCustPerHour, maxCustPerHour, avgCookieSale, locationName) {
+  var instance = new Store (minCustPerHour, maxCustPerHour, avgCookieSale, locationName);
+
+  instance.totalCookiesPerDay();
+  instance.tableBody();
+}
+
 tableHeader();
-firstAndPike.totalCookiesPerDay();
+
 firstAndPike.tableBody();
-
-SeaTacAirport.totalCookiesPerDay();
 SeaTacAirport.tableBody();
-
-SeattleCenter.totalCookiesPerDay();
 SeattleCenter.tableBody();
-
-CapitolHill.totalCookiesPerDay();
 CapitolHill.tableBody();
-
-Alki.totalCookiesPerDay();
 Alki.tableBody();
