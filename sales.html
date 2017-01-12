@@ -9,18 +9,18 @@
     <section id="form-section">
       <form id="first-form">
         <fieldset>
-          <legend>New Location</legend>
-          <label for="locationName">Location:</label>
-          <input name="locationName" id="locationInput" type="text" maxlength="30"/></br>
+          <legend>Calculate New Store!</legend>
+          <label for="locationName">Store Location:</label>
+          <input name="locationName" id="locationInput" type="text" maxlength="30"/>
 
-          <label for="minCustPerHour">Enter minimum customers per hour:</label>
-          <input name="minCustPerHour" id="minInput" type="number" min="1" max="50"/></br>
+          <label for="minCustPerHour">Min. Customers Per Hour:</label>
+          <input name="minCustPerHour" id="minInput" type="number" min="1" max="50"/>
 
-          <label for="maxCustPerHour">Enter maximum customers per hour:</label>
-          <input name="maxCustPerHour" id="maxInput" type="number" min="3" max="500"/></br>
+          <label for="maxCustPerHour">Max. Customers Per Hour:</label>
+          <input name="maxCustPerHour" id="maxInput" type="number" min="3" max="500"/>
 
-          <label for="avgCookieSale">Enter average cookies bought by customer:</label>
-          <input name="avgCookieSale" id="avgInput" type="number" step="0.1"/></br>
+          <label for="avgCookieSale">Avg. Cookies Sale:</label>
+          <input name="avgCookieSale" id="avgInput" type="number" step="0.1"/>
 
           <button id="submit-button" type="submit">Submit</button>
         </fieldset>
@@ -28,7 +28,9 @@
     </section>
     <table>
       <thead id="header-table"></thead>
+
       <tbody id="body-table"></tbody>
+      <tfoot id="footer-table"></tfoot>
     </table>
     <div>
       <ul id="cookies">
