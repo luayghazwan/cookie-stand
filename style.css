@@ -15,7 +15,7 @@
 a:link {
   color:#FF530D;
 }
-.navBar li {
+.nav-bar li {
   display: inline;
   list-style: none;
   font-size: 1.8em;
@@ -25,11 +25,11 @@ a:link {
   background-color: inherit;;
   text-align: center;
 }
-.navBar li a {
+.nav-bar li a {
   text-decoration: none;
   color: inherit;
 }
-.shiftHome {
+.shift-home {
   margin-left: 550px;
   margin-right: 7px;
   padding: 5px;
@@ -40,7 +40,7 @@ a:link {
   border-radius: 100px / 100px;
   width: 100%;
 }
-.shiftNavBar {
+.shift-nav-bar {
   margin-right: 7px;
   margin-left: 7px;
   padding: 5px;
@@ -60,6 +60,7 @@ a:link {
 body {
   background-color: #b4ffff;
   margin: 0px;
+  text-align: center;
 }
 #bigPicture {
   width: 100%;
@@ -70,14 +71,14 @@ body {
   position: relative;
 }
 
-.fishline img {
+.fish-line img {
   display: inline;
   max-width: 3%;
   margin: 0px;
   padding: 0px;
 }
 
-.fishline2 img {
+.fish-line2 img {
   display: inline;
   max-width: 3%;
   margin: 0px;
@@ -108,6 +109,32 @@ footer ul {
   display: block;
 }
 
-div .footerMainNames  {
-  display: inline;
+.footer-main-names  {
+  display: block;
+  float: left;
+}
+.lists-header {
+  text:20px;
+  font-style: bold;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+
+#first-form {
+  background: black;
+  color: white;
+  font-family: fantasy;
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  border-style: dashed;
+  border-radius: 50px;
+}
+
+#fieldset{
+  border-style: dashed;
+}
+
+#legend {
+  border: 1px;
 }
