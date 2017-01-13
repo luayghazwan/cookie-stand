@@ -90,6 +90,21 @@ var SeattleCenter = new Store (11,38,3.7,'Seattle Center');
 var CapitolHill = new Store (20,38,2.3,'Capitol Hill');
 var Alki = new Store (2,16,4.6,'Alki');
 
+//Function for Total Per Hour
+function hourlyStoreTotal() {
+  for (var i = 0; i < hours.length - 1; i++) {
+    var sum = 0;
+    for (var j = 0; j < storesTotalPerHour.length; j++) {
+      console.log('storesTotalPerHour.length',storesTotalPerHour.length);
+      sum += storesTotalPerHour[j].cookiesPurchased[i];
+    }
+    hourlyTotal.push(sum);
+  }
+  console.log(hourlyTotal);
+  return hourlyTotal;
+};
+
+//Listener Event
 locForm.addEventListener('submit', function(event){
   event.preventDefault();
   event.stopPropagation();
@@ -104,10 +119,28 @@ locForm.addEventListener('submit', function(event){
 
 function addLocation(minCustPerHour, maxCustPerHour, avgCookieSale, locationName) {
   var instance = new Store (minCustPerHour, maxCustPerHour, avgCookieSale, locationName);
-
   instance.tableBody();
+  storesTotalPerHour.push(instance);
+
+  var list = document.getElementById('footer-table');// to remove the child
+  list.removeChild(list.lastChild);
+  newTotal();
+  tableFooter();
 }
 
+//Function that sums up the old total with the new Input
+function newTotal(){
+  for (var i = 0; i < hours.length; i++){
+    console.log(storesTotalPerHour[storesTotalPerHour.length - 1].cookiesPurchased[i]);
+    hourlyTotal[i] = hourlyTotal[i] + storesTotalPerHour[storesTotalPerHour.length - 1].cookiesPurchased[i];
+  }
+  console.log('newTotalsum',hourlyTotal);
+  return hourlyTotal;
+};
+
+//Array used for Per Hour Total
+var storesTotalPerHour = [firstAndPike, SeaTacAirport, SeattleCenter, CapitolHill, Alki];
+console.log(storesTotalPerHour);
 //Calling the Header - Body
 tableHeader();
 firstAndPike.tableBody();
@@ -115,21 +148,6 @@ SeaTacAirport.tableBody();
 SeattleCenter.tableBody();
 CapitolHill.tableBody();
 Alki.tableBody();
-
-var storesTotalPerHour = [firstAndPike, SeaTacAirport, SeattleCenter, CapitolHill, Alki];
-
-//Function for Total Per Hour
-function hourlyStoreTotal() {
-  for (var i = 0; i < hours.length; i++) {
-    var sum = 0;
-    for (var j = 0; j < storesTotalPerHour.length; j++) {
-      sum += storesTotalPerHour[j].cookiesPurchased[i];
-    }
-    hourlyTotal.push(sum);
-  }
-  console.log(hourlyTotal);
-  return hourlyTotal;
-};
 
 //Total Per Hour & Footer
 hourlyStoreTotal();
