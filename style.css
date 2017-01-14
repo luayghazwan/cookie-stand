@@ -1,3 +1,4 @@
+color: grey;
 #header {
   background-color: #EDD9B4;
   margin: 0px;
@@ -7,75 +8,73 @@
   max-width: 960px;
 }
 
-
 #fishImage {
-  max-width: 13%;
+  max-width: 30%;
+  padding: 15px 10px 10px 30px;
   background: transparent;
+  float:left;
+  display: block;
 }
 a:link {
   color:#FF530D;
 }
+
 .nav-bar li {
   display: inline;
   list-style: none;
-  font-size: 1.8em;
+  font-size: 1.4em;
   background: inherit;
   font-family: cursive;
   max-width: 100%;
-  background-color: inherit;;
+  background-color: #FF530D;
+  text-align: center;
   text-align: center;
 }
 .nav-bar li a {
   text-decoration: none;
   color: inherit;
 }
-.shift-home {
-  margin-left: 550px;
-  margin-right: 7px;
-  padding: 5px;
+
+.head-nav-bar {
+  color:white;
+  text-shadow: 2px 1px black;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
   border: 1px solid #FF530D;
   box-shadow: 10px 10px 10px #888888;
   -moz-border-radius: 100px / 100px;
   -webkit-border-radius: 100px / 100px;
   border-radius: 100px / 100px;
   width: 100%;
-}
-.shift-nav-bar {
-  margin-right: 7px;
-  margin-left: 7px;
-  padding: 5px;
-  border: 1px solid #FF530D;
-  box-shadow: 10px 10px 10px #888888;
-  -moz-border-radius: 100px / 100px;
-  -webkit-border-radius: 100px / 100px;
-  border-radius: 100px / 100px;
-  width: 100%;
-}
-.fishesBorder {
-  color: grey;
-  border: 3px solid grey;
-  margin: 4px;
 }
 
 body {
-  background-color: #b4ffff;
   margin: 0px;
-  text-align: center;
+  margin-right: 1px;
+  text-align: left;
+  max-width: 100%;
 }
 #bigPicture {
-  width: 100%;
+  min-width:: 100%;
+  max-width: 100%;
   opacity: 0.7;
-  display: block;
+  /*border: 5px solid #FF6C15;*/
+  display: inline;
   margin: 0px;
   padding: 0px;
-  position: relative;
+  box-shadow: 1px 1px 1px 1px grey;
 }
 
+.fish-line {
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
 .fish-line img {
   display: inline;
   max-width: 3%;
   margin: 0px;
-  padding: 0px;
+  padding: 5px;
 }
 
 .fish-line2 img {
@@ -89,23 +88,24 @@ body {
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
+  padding: 5px;
 }
 
 h1 {
-  font-family: monospace;
+  mily: monospace;
   font-size: 100px;
   position: absolute;
   top: 200px;
   left: 170px;
   font-style: italic;
   color: #FF530D;
-  text-shadow: 2px 2px black;
+  text-shadow: 2px 1px black;
 }
 
 footer ul {
   list-style: none;
   size: 15px;
-  font-family: fantasy;
+  font-family: arial;
   display: block;
 }
 
@@ -120,21 +120,63 @@ footer ul {
 
 /*-------------------------------------------------------------------------------------------------*/
 
+
+
 #first-form {
   background: black;
+  background: rgba(0, 0, 0, 0.7);
   color: white;
   font-family: fantasy;
   text-align: center;
-  margin: 5px;
-  padding: 5px;
+  text-shadow: 2px 1px black;
   border-style: dashed;
   border-radius: 50px;
-}
-
-#fieldset{
-  border-style: dashed;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 5px;
+  min-width: 95%;
+  color: #FF6C15;
 }
 
 #legend {
-  border: 1px;
+  font-size: 25px;
+  color: #FF6C15;
+  text-shadow: 1px 1px white;
+}
+
+fieldset{
+  padding-top: 10px;
+  border-style: dashed;
+  border: none;
+}
+table {
+  background: black;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-style: dashed;
+  border-color: #FF6C15;
+  padding: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  min-width: 98%;
+  max-width: 100%;
+
+}
+thead {
+  font-size: 18px;
+  color: white;
+  text-shadow: 1px 1px black;
+  font-family: cursive;
+}
+td {
+  border:1px solid white;
+  padding: 10px;
+  font-family: fantasy;
+  text-shadow: 1px 1px black;
+  color: white;
+}
+
+tfoot {
+
 }
