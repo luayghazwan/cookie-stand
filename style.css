@@ -109,13 +109,19 @@ footer ul {
   display: block;
 }
 
-.footer-main-names  {
+.footer-boxes  {
   display: block;
   float: left;
 }
 .lists-header {
   text:20px;
   font-style: bold;
+}
+
+.footer-boxes-main-titles {
+  text-decoration: underline;
+  font-weight: bold;
+
 }
 
 /*-------------------------------------------------------------------------------------------------*/
