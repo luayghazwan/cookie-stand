@@ -68,11 +68,11 @@ body {
   box-shadow: 1px 1px 1px 1px grey;
 }
 
-.fish-line {
+#fish-line {
   padding-top: 15px;
   padding-bottom: 25px;
 }
-.fish-line img {
+#fish-line img {
   display: inline;
   max-width: 3%;
   margin: 0px;
